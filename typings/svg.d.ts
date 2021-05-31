@@ -3,5 +3,18 @@
  */
 declare module "*.svg" {
   const content: any;
+  const ReactComponent:React.VFC<React.SVGProps<SVGSVGElement>>
+  export {
+    ReactComponent
+  }
+  export default content;
+}
+
+declare module "*.svg?component"{
+  const content: any;
+  const ReactComponent:React.VFC<React.SVGProps<SVGSVGElement>>
+  export {
+    ReactComponent
+  }
   export default content;
 }
