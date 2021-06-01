@@ -108,3 +108,14 @@ index.html 从 public 目录移到了跟目录，同时变更了部分页面中�
 ```diff
 +module.exports = {}
 ```
+
+## 一些问题总结
+
+### 1. Cannot find module 'src/index.tsx'
+
+> index.html 中 `<script type="module" src="/src/index.tsx"></script>` 对应src中的 `/`必须要有，不然会去找 node_modules
+
+### 2. Uncaught ReferenceError: require is not defined
+
+> 使用vite时，源码中不能有 `require` , [尤大的相关回复](https://github.com/vitejs/vite/issues/728#issuecomment-760260219)
+
